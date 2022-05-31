@@ -1,10 +1,9 @@
-@import './vars.scss';
+@import './vars';
 
 $outdents:
   24 $p24,
   28 $p28,
   32 $p32;
-
 $directions: 'top', 'right', 'bottom', 'left';
 
 @each $name, $outdent in $outdents {

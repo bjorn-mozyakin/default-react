@@ -1,8 +1,92 @@
-# Getting Started with Create React App
+# Дефолтный шаблон для разработки
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Содержание <a name = "content_table"></a>
 
-## Available Scripts
+- [О шаблоне](#about)
+- [Начало работы](#getting-started)
+- [Настройка окружения](#getting-started)
+  - [Настройка JS-линтера (ESLint и Prettier)](#linter_js)
+  - [Настройка CSS-линтера (Stylelint)](#linter_scss)
+- [Скрипты](#scripts)
+
+## О шаблоне <a name = "about"></a>
+
+Шаблон создан с помощью [Create React App](https://github.com/facebook/create-react-app).
+
+В шаблоне используются:
+- [React](https://reactjs.org/),
+- [Redux](https://redux.js.org/), 
+- [Typescript](https://www.typescriptlang.org/), 
+- [SCSS](https://sass-lang.com/), 
+- [ES Lint](https://eslint.org/), 
+- [Prettier](https://prettier.io/), 
+- [Stylelint](https://stylelint.io/)
+
+Вернуться [К содержанию](#content_table)
+
+## Начало разработки <a name = "getting-started"></a>
+
+1. Установить зависимости:
+```bash
+npm сi
+```
+
+Вернуться [К содержанию](#content_table)
+
+## Настройка окружения
+
+На проекте используются JS и CSS линтеры. Их настройка на примере **PHPStorm**.
+
+### Настройка JS-линтера (ESLint и Prettier) <a name = "linter_js"></a>
+
+#### ES Lint:
+
+- `Preferences | Languages & Frameworks | JavaScript | Code Quality Tools | ESLint`
+- Указать путь к npm-модулю: `YOUR_PATH_TO_PROJECT/node_modules/eslint`
+- Указать путь к файлу с конфигом: `YOUR_PATH_TO_PROJECT/.eslintrc`
+
+#### Prettier
+
+- Установить [плагин Prettier](https://plugins.jetbrains.com/plugin/10456-prettier).
+- Настроить автоформатирования кода при сохранении ([подробнее](https://prettier.io/docs/en/webstorm.html)).
+    - `Preferences | Languages & Frameworks | JavaScript | Prettier`
+    - Указать путь к npm-модулю: `YOUR_PATH_TO_PROJECT/node_modules/prettier`
+    - Поставить галочку `Run on save for file`
+
+Теперь при каждом сохранении файла ES Lint будет подчеркивать ошибки, а Prettier  автоформатировать код.
+
+Кроме того, проверку можно запустить вручную, запустив скрипт:
+```bash
+npm run lint-js
+```
+
+Вернуться [К содержанию](#content_table)
+
+## Настройка CSS-линтера (Stylelint) <a name = "linter_scss"></a>
+
+**Для phpStorm**
+- Включить опцию `Languages & Frameworks - Style Sheets - Stylelint`
+- Указать путь к npm-пакету
+- Указать путь к файлу конфига
+
+Теперь IDE начнет подчеркивать красным ошибки в scss-коде.
+
+Дополнительно можно настроить watcher в своей IDE, который при изменении будет автоматически править ошибки (autofix поддерживается не для всех правил). Для PhpStorm: `Tools - File Watchers - Add(+)`.
+
+Для MacOS:
+
+![View of switch](./docs/img/SettingsWatcherStylelint.png)
+
+
+Кроме того, проверку можно запустить вручную, запустив один из скриптов:
+```bash
+npm run lint-styles
+npm run lint-styles-fix
+```
+
+Вернуться [К содержанию](#content_table)
+
+## Скрипты <a name = "scripts"></a>
 
 In the project directory, you can run:
 
@@ -39,8 +123,4 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Вернуться [К содержанию](#content_table)

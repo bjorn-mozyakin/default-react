@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <div className="App">Default react-redux template</div>
+      <div className="app">Default react-redux template</div>
       <button onClick={() => dispatch(testAction())}>
         Click me: <span>{counter}</span>
       </button>
